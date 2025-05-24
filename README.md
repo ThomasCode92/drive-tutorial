@@ -22,6 +22,19 @@ official documentation linked below. Additional support is available via the
 - [Drizzle](https://orm.drizzle.team)
 - [Tailwind CSS](https://tailwindcss.com)
 
+### UI Scaffolding
+
+The base UI for this project was created using [v0](https://v0.dev/), a tool
+that enables fast UI generation through _vibe coding_. An
+[example](https://v0.dev/chat/google-drive-clone-ui-6jEAM0wxOgc?b=b_fFQhsfElqQi&f=0)
+of this approach can be seen in Theo’s walkthrough on YouTube.
+
+To apply the same base UI in a project, run the following command:
+
+```bash
+npx shadcn@latest add "https://v0.dev/chat/b/b_fFQhsfElqQi"
+```
+
 ### Learn More about the T3 Stack
 
 To explore more about the [T3 Stack](https://create.t3.gg/), refer to the
