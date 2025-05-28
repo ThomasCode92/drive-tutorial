@@ -5,13 +5,17 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { Button } from "~/components/ui/button";
-import { mockFiles } from "~/lib/mock-data";
+import { mockFiles, mockFolders } from "~/lib/mock-data";
 
 export default function GoogleDriveClone() {
-  const [currentFolder, setCurrentFolder] = useState<string | null>(null);
+  const [currentFolder, setCurrentFolder] = useState("root");
 
   const getCurrentFiles = () => {
     return mockFiles.filter((file) => file.parent === currentFolder);
+  };
+
+  const getCurrentFolders = () => {
+    return mockFolders.filter((folder) => folder.parent === currentFolder);
   };
 
   const handleFolderClick = (folderId: string) => {
@@ -45,7 +49,7 @@ export default function GoogleDriveClone() {
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center">
             <Button
-              onClick={() => setCurrentFolder(null)}
+              onClick={() => setCurrentFolder("root")}
               variant="ghost"
               className="mr-2 text-gray-300 hover:text-white"
             >
