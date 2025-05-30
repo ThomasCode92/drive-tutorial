@@ -25,6 +25,7 @@ export const mockFolders: Folder[] = [
 
 // prettier-ignore
 export const mockFiles: File[] = [
+  { id: "4", name: "Resume.pdf", type: "file", url: "/files/resume.pdf", parent: "root", size: "1.2 MB" },
   { id: "5", name: "Project Proposal.docx", type: "file", url: "/files/proposal.docx", parent: "1", size: "2.5 MB" },
   { id: "6", name: "Vacation.jpg", type: "file", url: "/files/vacation.jpg", parent: "2", size: "3.7 MB" },
   { id: "7", name: "Profile Picture.png", type: "file", url: "/files/profile.png", parent: "2", size: "1.8 MB" },
