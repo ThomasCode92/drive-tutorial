@@ -48,6 +48,39 @@ Visit the
 [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) for
 feedback and contributions.
 
+## 🚀 Getting Started
+
+### 🛠️ Environment Variables
+
+To configure the environment variables, copy the example file and update the
+values as needed:
+
+```bash
+cp .env.example .env
+```
+
+Open the `.env` file and fill in the required fields based on the project’s
+needs (e.g., database credentials, API keys, etc.).
+
+### 🗄️ Database Setup
+
+This project uses [SingleStore](https://www.singlestore.com/) as the primary
+database, with [Drizzle ORM](https://orm.drizzle.team) for type-safe, efficient
+data access and schema management.
+
+```bash
+pnpm run db:push       # Push the schema to the database
+pnpm run db:studio     # Launch Drizzle Studio
+```
+
+### 🕹️ Development Server
+
+To start the local development server:
+
+```bash
+pnpm run dev
+```
+
 ## 🚧 Development Logbook
 
 Tracking progress on key features and tasks for the project.
@@ -56,3 +89,12 @@ Tracking progress on key features and tasks for the project.
 - [ ] 🔗 Sync folder open state with the URL
 - [ ] 🔐 Implement user authentication
 - [ ] 📁 Enable file upload functionality
+
+### 📝 Note from 5-28-2025
+
+Just finished up the database connection, next steps:
+
+- [ ] Update schema to show files and folders
+- [ ] Manually insert examples
+- [ ] Render them in the UI
+- [ ] Push and make sure it all works
