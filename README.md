@@ -94,7 +94,7 @@ Tracking progress on key features and tasks for the project.
 
 Just finished up the database connection, next steps:
 
-- [ ] Update schema to show files and folders
-- [ ] Manually insert examples
+- [x] Update schema to show files and folders
+- [x] Manually insert examples
 - [ ] Render them in the UI
 - [ ] Push and make sure it all works
