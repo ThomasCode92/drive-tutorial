@@ -1,3 +1,4 @@
+import { eq } from "drizzle-orm";
 import { z } from "zod";
 
 import { db } from "~/server/db";
@@ -21,8 +22,14 @@ export default async function GoogleDriveClone(props: {
   const folderId = data.folderId;
   console.log(folderId);
 
-  const folders = await db.select().from(folderSchema);
-  const files = await db.select().from(fileSchema);
+  const folders = await db
+    .select()
+    .from(folderSchema)
+    .where(eq(folderSchema.parent, folderId));
+  const files = await db
+    .select()
+    .from(fileSchema)
+    .where(eq(fileSchema.parent, folderId));
 
   return <DriveContents folders={folders} files={files} />;
 }
