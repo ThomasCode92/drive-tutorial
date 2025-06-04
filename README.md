@@ -85,7 +85,7 @@ pnpm run dev
 
 Tracking progress on key features and tasks for the project.
 
-- [ ] 🛢️ Set up the database and define data models
+- [x] 🛢️ Set up the database and define data models
 - [ ] 🔗 Sync folder open state with the URL
 - [ ] 🔐 Implement user authentication
 - [ ] 📁 Enable file upload functionality
@@ -96,5 +96,4 @@ Just finished up the database connection, next steps:
 
 - [x] Update schema to show files and folders
 - [x] Manually insert examples
-- [ ] Render them in the UI
-- [ ] Push and make sure it all works
+- [x] Render them in the UI
