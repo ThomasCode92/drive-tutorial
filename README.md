@@ -103,6 +103,6 @@ Just finished up the database connection, next steps:
 
 The database and UI are now connected, some improvements to make:
 
-- [ ] Change folders to link components, remove all client state
+- [x] Change folders to link components, remove all client state
 - [ ] Clean up the database and data fetching patterns
 - [ ] Real homepage
