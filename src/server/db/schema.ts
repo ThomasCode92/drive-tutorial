@@ -33,3 +33,6 @@ export const folders_table = createTable(
   },
   (table) => [index("parent_index").on(table.parent)],
 );
+
+export type File = typeof files_table.$inferSelect;
+export type Folder = typeof folders_table.$inferSelect;
