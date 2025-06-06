@@ -1,3 +1,5 @@
+import "server-only"; // Ensure this file is only run on the server
+
 import { eq } from "drizzle-orm";
 
 import { db } from "~/server/db";
