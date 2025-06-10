@@ -1,5 +1,6 @@
 "use client";
 
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { ChevronRight, Upload } from "lucide-react";
 import Link from "next/link";
 
@@ -37,6 +38,16 @@ export default function DriveContents(props: {
               </div>
             ))}
           </div>
+
+          <div>
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+          </div>
+
           <Button
             onClick={handleUpload}
             className="bg-blue-600 text-white hover:bg-blue-700"
