@@ -87,7 +87,7 @@ Tracking progress on key features and tasks for the project.
 
 - [x] 🛢️ Set up the database and define data models
 - [x] 🔗 Sync folder open state with the URL
-- [ ] 🔐 Implement user authentication
+- [x] 🔐 Implement user authentication
 - [ ] 📁 Enable file upload functionality
 - [ ] 📊 Add analytics tracking
 
