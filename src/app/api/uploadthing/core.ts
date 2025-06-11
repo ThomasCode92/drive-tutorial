@@ -2,6 +2,8 @@ import { auth } from "@clerk/nextjs/server";
 import { createUploadthing, type FileRouter } from "uploadthing/next";
 import { UploadThingError } from "uploadthing/server";
 
+import * as mutations from "~/server/db/mutations";
+
 const f = createUploadthing();
 
 export const ourFileRouter = {
@@ -17,6 +19,9 @@ export const ourFileRouter = {
     .onUploadComplete(async ({ metadata, file }) => {
       console.log("Upload complete for userId:", metadata.userId);
       console.log("file url", file.ufsUrl);
+
+      const uploadedFile = { ...file, parent: 0 };
+      await mutations.createFile(uploadedFile, metadata.userId);
 
       return { uploadedBy: metadata.userId };
     }),
