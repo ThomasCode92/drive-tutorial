@@ -88,7 +88,7 @@ Tracking progress on key features and tasks for the project.
 - [x] 🛢️ Set up the database and define data models
 - [x] 🔗 Sync folder open state with the URL
 - [x] 🔐 Implement user authentication
-- [ ] 📁 Enable file upload functionality
+- [x] 📁 Enable file upload functionality
 - [ ] 📊 Add analytics tracking
 
 ### 📝 Note from 5-28-2025
@@ -106,3 +106,12 @@ The database and UI are now connected, some improvements to make:
 - [x] Change folders to link components, remove all client state
 - [x] Clean up the database and data fetching patterns
 - [ ] Real homepage
+
+### 📝 Note from 7-4-2025
+
+Uploading a file to '[uploadthing](https://uploadthing.com/)' works, things that
+can be approved:
+
+- [ ] Upload files to the right folder
+- [ ] Delete file button
+- [ ] Allow files that are not images to be uploaded
