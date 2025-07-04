@@ -3,17 +3,19 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import { UploadButton } from "~/components/uploadthing";
 import type { File, Folder } from "~/server/db/schema";
 import { FileRow, FolderRow } from "./file-row";
-import { UploadButton } from "~/components/uploadthing";
 
 export default function DriveContents(props: {
   files: File[];
   folders: Folder[];
   parents: Folder[];
 }) {
+  const navigate = useRouter();
+
   return (
     <div className="min-h-screen bg-gray-900 p-8 text-gray-100">
       <div className="mx-auto max-w-6xl">
@@ -61,7 +63,12 @@ export default function DriveContents(props: {
             ))}
           </ul>
         </div>
-        <UploadButton endpoint="imageUploader" />
+        <UploadButton
+          endpoint="imageUploader"
+          onClientUploadComplete={() => {
+            navigate.refresh();
+          }}
+        />
       </div>
     </div>
   );
