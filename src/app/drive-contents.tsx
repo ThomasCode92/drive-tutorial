@@ -4,8 +4,10 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
+import { UploadButton } from "~/components/uploadthing";
 import type { File, Folder } from "~/server/db/schema";
 import { FileRow, FolderRow } from "./file-row";
+import { UploadButton } from "~/components/uploadthing";
 
 export default function DriveContents(props: {
   files: File[];
@@ -59,6 +61,7 @@ export default function DriveContents(props: {
             ))}
           </ul>
         </div>
+        <UploadButton endpoint="imageUploader" />
       </div>
     </div>
   );
