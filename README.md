@@ -112,6 +112,7 @@ The database and UI are now connected, some improvements to make:
 Uploading a file to '[uploadthing](https://uploadthing.com/)' works, things that
 can be approved:
 
+- [ ] Add "ownership" to files and folders
 - [ ] Upload files to the right folder
 - [ ] Delete file button
 - [ ] Allow files that are not images to be uploaded
