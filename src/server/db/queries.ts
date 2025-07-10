@@ -33,6 +33,14 @@ export function getAllFolders(folderId: number) {
     .where(eq(folderSchema.parent, folderId));
 }
 
+export async function getFolderById(folderId: number) {
+  const folders = await db
+    .select()
+    .from(folderSchema)
+    .where(eq(folderSchema.id, folderId));
+  return folders[0];
+}
+
 export function getAllFiles(folderId: number) {
   return db.select().from(fileSchema).where(eq(fileSchema.parent, folderId));
 }
