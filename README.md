@@ -115,4 +115,4 @@ can be approved:
 - [x] Add "ownership" to files and folders
 - [x] Upload files to the right folder
 - [ ] Delete file button
-- [ ] Allow files that are not images to be uploaded
+- [x] Allow files that are not images to be uploaded

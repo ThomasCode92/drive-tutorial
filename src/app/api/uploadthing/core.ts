@@ -11,7 +11,7 @@ import * as queries from "~/server/db/queries";
 const f = createUploadthing();
 
 export const ourFileRouter = {
-  imageUploader: f({ image: { maxFileSize: "4MB", maxFileCount: 1 } })
+  driveUploader: f({ blob: { maxFileSize: "4MB", maxFileCount: 1 } })
     .input(z.object({ folderId: z.number() }))
     .middleware(async ({ input }) => {
       const user = await auth();
