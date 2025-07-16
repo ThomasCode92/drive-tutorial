@@ -8,6 +8,24 @@ import "./src/env.js";
 const config = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+
+  async rewrites() {
+    return [
+      {
+        source: "/relay-BxMI/static/:path*",
+        destination: "https://us-assets.i.posthog.com/static/:path*",
+      },
+      {
+        source: "/relay-BxMI/:path*",
+        destination: "https://us.i.posthog.com/:path*",
+      },
+      {
+        source: "/relay-BxMI/flags",
+        destination: "https://us.i.posthog.com/flags",
+      },
+    ];
+  },
+  skipTrailingSlashRedirect: true, // This is required to support PostHog trailing slash API requests
 };
 
 export default config;
