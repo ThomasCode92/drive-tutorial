@@ -1,8 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
 import posthog from "posthog-js";
 import { PostHogProvider as PHProvider } from "posthog-js/react";
+import { useEffect } from "react";
+
+import UserIdentification from "./user-identification";
 
 import { env } from "~/env";
 
@@ -16,5 +18,10 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     });
   }, []);
 
-  return <PHProvider client={posthog}>{children}</PHProvider>;
+  return (
+    <PHProvider client={posthog}>
+      <UserIdentification />
+      {children}
+    </PHProvider>
+  );
 }
