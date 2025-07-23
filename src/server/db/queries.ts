@@ -11,6 +11,7 @@ import {
 export async function getAllParentsForFolder(folderId: number) {
   const parents = [];
   let currentId: number | null = folderId;
+
   while (currentId != null) {
     const folders = await db
       .selectDistinct()
@@ -30,7 +31,8 @@ export function getAllFolders(folderId: number) {
   return db
     .select()
     .from(folderSchema)
-    .where(eq(folderSchema.parent, folderId));
+    .where(eq(folderSchema.parent, folderId))
+    .orderBy(folderSchema.name);
 }
 
 export async function getFolderById(folderId: number) {
@@ -42,5 +44,9 @@ export async function getFolderById(folderId: number) {
 }
 
 export function getAllFiles(folderId: number) {
-  return db.select().from(fileSchema).where(eq(fileSchema.parent, folderId));
+  return db
+    .select()
+    .from(fileSchema)
+    .where(eq(fileSchema.parent, folderId))
+    .orderBy(fileSchema.name);
 }
