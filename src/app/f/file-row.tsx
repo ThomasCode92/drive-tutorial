@@ -1,6 +1,8 @@
-import { FileIcon, Folder as FolderIcon } from "lucide-react";
+import { FileIcon, Folder as FolderIcon, Trash2Icon } from "lucide-react";
 import Link from "next/link";
 
+import { Button } from "~/components/ui/button";
+import { deleteFile } from "~/server/actions";
 import type { File, Folder } from "~/server/db/schema";
 
 export function FileRow(props: { file: File }) {
@@ -22,8 +24,17 @@ export function FileRow(props: { file: File }) {
             {file.name}
           </a>
         </div>
-        <div className="col-span-3 text-gray-400">{"file"}</div>
+        <div className="col-span-2 text-gray-400">{"File"}</div>
         <div className="col-span-3 text-gray-400">{file.size}</div>
+        <div className="col-span-1 text-right text-gray-400">
+          <Button
+            aria-label="Delete file"
+            variant="ghost"
+            onClick={() => deleteFile(file.id)}
+          >
+            <Trash2Icon className="" size={20} />
+          </Button>
+        </div>
       </div>
     </li>
   );
