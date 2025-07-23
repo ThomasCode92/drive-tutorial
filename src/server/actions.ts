@@ -2,6 +2,7 @@
 
 import { auth } from "@clerk/nextjs/server";
 import { and, eq } from "drizzle-orm";
+import { cookies } from "next/headers";
 import { UTApi } from "uploadthing/server";
 
 import { db } from "~/server/db";
@@ -24,6 +25,9 @@ export async function deleteFile(fileId: number) {
 
   await utApi.deleteFiles([file.url.replace("https://utfs.io/f/", "")]); // TODO: add fileKey to db schema
   await db.delete(fileSchema).where(eq(fileSchema.id, fileId));
+
+  const c = await cookies();
+  c.set("force-refresh", JSON.stringify(Math.random()));
 
   return { success: true };
 }
