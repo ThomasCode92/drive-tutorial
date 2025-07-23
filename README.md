@@ -91,6 +91,9 @@ Tracking progress on key features and tasks for the project.
 - [x] 📁 Enable file upload functionality
 - [x] 📊 Add analytics tracking
 
+<details>
+<summary>Click to expand the logbook</summary>
+
 ### 📝 Note from 5-28-2025
 
 Just finished up the database connection, next steps:
@@ -114,5 +117,14 @@ can be approved:
 
 - [x] Add "ownership" to files and folders
 - [x] Upload files to the right folder
-- [ ] Delete file button
+- [x] Delete file button
 - [x] Allow files that are not images to be uploaded
+
+</details>
+
+## 🎯 Fun Follow Ups
+
+### Folder deletion
+
+Make sure to fetch all of the folders that have it as a parent, and their
+children too.
