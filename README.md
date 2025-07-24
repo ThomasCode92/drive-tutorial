@@ -35,6 +35,16 @@ To apply the same base UI in a project, run the following command:
 npx shadcn@latest add "https://v0.dev/chat/b/b_fFQhsfElqQi"
 ```
 
+#### 🏠 Homepage
+
+The homepage layout was also crafted using v0. The generation prompt for it was:
+
+```text
+A minimal homepage for a Google Drive clone named T4S Drive. It should be just a
+marketing page with a "get started" button. A gradient would be nice, please use
+black and dark neutral grays.
+```
+
 ### 🧰 Learn More about the T3 Stack
 
 To explore more about the [T3 Stack](https://create.t3.gg/), refer to the
