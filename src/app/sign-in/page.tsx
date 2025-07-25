@@ -1,5 +1,7 @@
 import { SignInButton } from "@clerk/nextjs";
 
+import { Button } from "~/components/ui/button";
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white">
@@ -18,7 +20,14 @@ export default function HomePage() {
             documents from any device, anywhere in the world.
           </p>
 
-          <SignInButton />
+          <Button
+            size="lg"
+            className="cursor-pointer rounded-full bg-white px-8 py-6 text-lg font-semibold text-black transition-all duration-200 hover:scale-105 hover:bg-gray-100"
+            type="submit"
+            asChild
+          >
+            <SignInButton forceRedirectUrl="/drive" />
+          </Button>
         </div>
       </main>
     </div>
