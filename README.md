@@ -35,6 +35,16 @@ To apply the same base UI in a project, run the following command:
 npx shadcn@latest add "https://v0.dev/chat/b/b_fFQhsfElqQi"
 ```
 
+#### 🏠 Homepage
+
+The homepage layout was also crafted using v0. The generation prompt for it was:
+
+```text
+A minimal homepage for a Google Drive clone named T4S Drive. It should be just a
+marketing page with a "get started" button. A gradient would be nice, please use
+black and dark neutral grays.
+```
+
 ### 🧰 Learn More about the T3 Stack
 
 To explore more about the [T3 Stack](https://create.t3.gg/), refer to the
@@ -108,7 +118,7 @@ The database and UI are now connected, some improvements to make:
 
 - [x] Change folders to link components, remove all client state
 - [x] Clean up the database and data fetching patterns
-- [ ] Real homepage
+- [x] Real homepage
 
 ### 📝 Note from 7-4-2025
 
@@ -124,7 +134,13 @@ can be approved:
 
 ## 🎯 Fun Follow Ups
 
-### Folder deletion
-
-Make sure to fetch all of the folders that have it as a parent, and their
-children too.
+- [ ] **Folder creation**<br /> Make a server action that takes a name and
+      parentId, and creates a folder with that name and parentId (don't forget
+      to set the ownerId).
+- [ ] **Folder deletion**<br /> Make sure to fetch all of the folders that have
+      it as a parent, and their children too.
+- [ ] **Access Control**<br /> Check if user is owner before showing the folder
+      page.
+- [ ] **Make a "file view" page**
+- [ ] **Access control**
+- [ ] **Toasts notifications**
