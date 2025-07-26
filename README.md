@@ -118,7 +118,7 @@ The database and UI are now connected, some improvements to make:
 
 - [x] Change folders to link components, remove all client state
 - [x] Clean up the database and data fetching patterns
-- [ ] Real homepage
+- [x] Real homepage
 
 ### 📝 Note from 7-4-2025
 
@@ -134,7 +134,13 @@ can be approved:
 
 ## 🎯 Fun Follow Ups
 
-### Folder deletion
-
-Make sure to fetch all of the folders that have it as a parent, and their
-children too.
+- [ ] **Folder creation**<br /> Make a server action that takes a name and
+      parentId, and creates a folder with that name and parentId (don't forget
+      to set the ownerId).
+- [ ] **Folder deletion**<br /> Make sure to fetch all of the folders that have
+      it as a parent, and their children too.
+- [ ] **Access Control**<br /> Check if user is owner before showing the folder
+      page.
+- [ ] **Make a "file view" page**
+- [ ] **Access control**
+- [ ] **Toasts notifications**
