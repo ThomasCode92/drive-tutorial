@@ -2,8 +2,8 @@ import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
 import { Button } from "~/components/ui/button";
-import * as queries from "~/server/db/queries";
 import * as mutations from "~/server/db/mutations";
+import * as queries from "~/server/db/queries";
 
 export default async function DrivePage() {
   const session = await auth();
@@ -20,7 +20,13 @@ export default async function DrivePage() {
           return redirect(`/f/${rootFolderId}`);
         }}
       >
-        <Button>Create Folder</Button>
+        <Button
+          size="lg"
+          className="cursor-pointer rounded-full bg-white px-8 py-6 text-lg font-semibold text-black transition-all duration-200 hover:scale-105 hover:bg-gray-100"
+          type="submit"
+        >
+          Create Your Drive
+        </Button>
       </form>
     );
   }
